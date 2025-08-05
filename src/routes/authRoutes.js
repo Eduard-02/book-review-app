@@ -5,12 +5,12 @@ import jwt from "jsonwebtoken";
 const router = express.Router();
 
 const generateToken = (userId) => {
-	return jwt.sign({userId}, process.env.JWT_SECRET, { expiresIn: "15d" });
+	return jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "15d" });
 }
 
 router.post("/register", async (req, res) => {
 	try {
-		const {email, username, password} = req.body;
+		const { email, username, password } = req.body;
 
 		if (!username || !email || !password) {
 			return res.status(400).json({ message: "All fields are required" });
@@ -35,7 +35,7 @@ router.post("/register", async (req, res) => {
 		const profileImage = `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`;
 
 		// Create New User
-		const user = new User ({
+		const user = new User({
 			email,
 			username,
 			password,
@@ -53,6 +53,7 @@ router.post("/register", async (req, res) => {
 				username: user.username,
 				email: user.email,
 				profileImage: user.profileImage,
+				createdAt: user.createdAt
 			}
 		});
 	} catch (error) {
@@ -63,7 +64,7 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
 	try {
-		const {email, password} = req.body;
+		const { email, password } = req.body;
 
 		if (!email || !password) return res.status(400).json({ message: "All fields are required" });
 
@@ -85,11 +86,12 @@ router.post("/login", async (req, res) => {
 				username: user.username,
 				email: user.email,
 				profileImage: user.profileImage,
+				createdAt: user.createdAt
 			}
 		});
 	} catch (error) {
 		console.log("Error in login route", error);
-		res.status(500).json({  message: "Internal server error" });
+		res.status(500).json({ message: "Internal server error" });
 	}
 });
 
