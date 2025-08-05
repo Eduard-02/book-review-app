@@ -76,7 +76,7 @@ router.delete("/:id", protectRoute, async (req, res) => {
 		// Delete image from Cloudinary
 		if (book.image && book.image.includes("cloudinary")) {
 			try {
-				const publicId = book.image.split("/").pop().split("."[0]);
+				const publicId = book.image.split("/").pop().split(".")[0];
 				await cloudinary.uploader.destroy(publicId);
 			} catch (deleteError) {
 				console.log("Error deleting image from Cloudinary", deleteError);
