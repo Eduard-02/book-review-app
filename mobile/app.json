@@ -32,8 +32,13 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font",
+      "expo-web-browser"
     ],
+    "extra": {
+      "apiUrl": "http://192.168.100.25:8000"
+    },
     "experiments": {
       "typedRoutes": true
     }
