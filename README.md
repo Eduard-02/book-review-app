@@ -1,4 +1,3 @@
-```markdown
 # Book Review App
 
 MERN project where readers share short book reviews. The repo includes a React Native client (Expo) and an Express/MongoDB API.
