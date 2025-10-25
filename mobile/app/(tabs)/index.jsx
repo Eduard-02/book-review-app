@@ -134,8 +134,8 @@ export default function Home() {
         onEndReachedThreshold={0.1}
         ListHeaderComponent={
           <View style={styles.header}>
-            <Text style={styles.headerTitle}>BookWorm 🐛</Text>
-            <Text style={styles.headerSubtitle}>Discover great reads from the community👇</Text>
+            <Text style={styles.headerTitle}>Book Review</Text>
+            <Text style={styles.headerSubtitle}>Discover great reviews from the community</Text>
           </View>
         }
         ListFooterComponent={
