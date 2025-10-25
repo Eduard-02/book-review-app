@@ -1,4 +1,3 @@
-```markdown
 # Book Review API
 
 Express + MongoDB service that powers the Book Review mobile app.
