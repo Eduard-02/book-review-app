@@ -1,4 +1,3 @@
-```markdown
 # Book Review Mobile App
 
 React Native + Expo client for browsing and posting book reviews.
