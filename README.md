@@ -40,7 +40,7 @@ book-review-app/
 
 ## About Me
 
-I’m **Eduardo Cebola**, a Software Developer focused on web and mobile development. Currently seeking Junior / Intern opportunities. <br>
+I’m **Eduardo Cebola**, a Software Developer focused on web and mobile development. Currently seeking opportunities. <br>
 <br>
 Let's stay in touch! Feel free to connect with me:
 
